@@ -402,7 +402,7 @@ Check your email for the full receipt.
 `.trim();
         console.log("SMS service successfully disabled.");
       } catch (smsError) {
-        console.error("Twilio SMS Error (DISABLED):", smsError.message);
+        console.error("Twilio SMS Error:", smsError.message);
       }
     }
     if (phone) {

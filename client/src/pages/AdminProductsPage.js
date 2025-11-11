@@ -1,7 +1,7 @@
 // client/src/pages/AdminProductsPage.js
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import { API_URL } from '../constants'; // Assumes you have constants.js
+
 
 function AdminProductsPage() {
   const [products, setProducts] = useState([]);

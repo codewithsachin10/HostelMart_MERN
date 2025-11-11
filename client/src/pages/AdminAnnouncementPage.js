@@ -55,8 +55,7 @@ function AdminAnnouncementPage() {
             <h3>Send Mail to All Users</h3>
             <form className="checkout-form" onSubmit={handleSubmit}>
               
-              {/* 👇 FIX: Added className="form-group" */}
-              <div className="form-group">
+              <div className="form-group"> {/* FIX: Added className="form-group" */}
                 <label htmlFor="subject">Email Subject Line</label>
                 <input 
                   type="text" 

@@ -337,14 +337,14 @@ function LoginPage() {
             <div className="form-footer">
               {!isSignUp && (
                 <p id="forgot-password-link">
-                  <a href="#" className="forgot-link">Forgot Password?</a>
+                  <a href="/reset-password" className="forgot-link">Forgot Password?</a>
                 </p>
               )}
               <p id="toggle-text" className="toggle-text">
                 {isSignUp
                   ? 'Already have an account? '
                   : 'Need an account? '}
-                <a href="#" id="toggle-link" onClick={toggleMode}>
+                <a href="/" id="toggle-link" onClick={toggleMode}>
                   {isSignUp ? 'Log In' : 'Sign Up'}
                 </a>
               </p>

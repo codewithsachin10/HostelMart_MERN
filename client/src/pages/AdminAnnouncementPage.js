@@ -18,7 +18,7 @@ function AdminAnnouncementPage() {
     const finalMessage = message || defaultMessage;
 
     try {
-      // FIX: Corrected endpoint from 'announcement' to 'announce'
+      // FIX: Use the correct, hardcoded API URL
       const response = await fetch('http://localhost:5001/api/admin/announce', {
         method: 'POST',
         headers: {
@@ -55,7 +55,8 @@ function AdminAnnouncementPage() {
             <h3>Send Mail to All Users</h3>
             <form className="checkout-form" onSubmit={handleSubmit}>
               
-              <div className form-group>
+              {/* 👇 FIX: Added className="form-group" */}
+              <div className="form-group">
                 <label htmlFor="subject">Email Subject Line</label>
                 <input 
                   type="text" 
@@ -86,7 +87,7 @@ function AdminAnnouncementPage() {
                 {isSubmitting ? 'Sending...' : 'Announce to All Users'}
               </button>
 
-              {statusMessage && <p className={`success-msg ${statusMessage.includes('Error') ? 'error-msg' : 'success-msg'}`} style={{marginTop: '15px'}}>{statusMessage}</p>}
+              {statusMessage && <p className={`success-msg ${statusMessage.includes('Error') || statusMessage.includes('failed') ? 'error-msg' : 'success-msg'}`} style={{marginTop: '15px'}}>{statusMessage}</p>}
             </form>
           </div>
         </div>
